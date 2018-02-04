@@ -8,7 +8,11 @@
 // ]
 // Expected Output: ['Alex Mali', 'dvsn', 'Mura Masa']
 function justArtists (songs) {
-
+    var array = []
+    songs.map(function(song) {
+        array.push (song.artist)
+    })
+    return array
 }
 
 // Sample Input:
@@ -24,7 +28,11 @@ function justArtists (songs) {
 //   { name: 'Banana Bunches', price: 2.33, quantity: 2 }
 // ]
 function toObject (candies) {
-
+    var array = []
+    candies.map(function (candy) {
+        array.push({name: candy[0], price: candy[1], quantity: candy[2]})
+    })
+    return array
 }
 
 module.exports = { justArtists, toObject }
